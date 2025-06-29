@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE HOL_DB.PUBLIC.tb_employees (Add commentMore actions
+CREATE OR REPLACE TABLE HOL_DB.PUBLIC.tb_employees (
     ID INTEGER,
     NAME STRING,
     DEPARTMENT STRING,
