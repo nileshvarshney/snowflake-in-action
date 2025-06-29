@@ -34,7 +34,7 @@ jobs:
           SNOWFLAKE_ROLE: ${{ secrets.SNOWFLAKE_ROLE }}
         run: |
           echo "Deploying to Snowflake..."
-          echo '
+          echo """
 import os
 import snowflake.connector
 import glob
@@ -61,7 +61,7 @@ try:
 finally:
     cs.close()
     conn.close()
-' > deploy.py
+""" > deploy.py
 
 
 
