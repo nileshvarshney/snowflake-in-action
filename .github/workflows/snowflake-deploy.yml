@@ -36,7 +36,6 @@ jobs:
           echo "Deploying to Snowflake..."
           python -c "
 import os, snowflake.connector, glob
-
 conn = snowflake.connector.connect(
     user=os.getenv('SNOWFLAKE_USER'),
     password=os.getenv('SNOWFLAKE_PASSWORD'),
@@ -46,7 +45,6 @@ conn = snowflake.connector.connect(
     schema=os.getenv('SNOWFLAKE_SCHEMA'),
     role=os.getenv('SNOWFLAKE_ROLE')
 )
-
 cs = conn.cursor()
 try:
     sql_files = sorted(glob.glob('sql/*.sql'))
